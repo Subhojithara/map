@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Tracking App</title>
     <link rel="stylesheet" href="/css/admin.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
 </head>
 <body>
     <% if (!authenticated) { %>
@@ -25,12 +25,18 @@
             <header>
                 <h1>Admin Dashboard</h1>
                 <button id="refresh-users-btn">Refresh Users</button>
+                <input type="text" id="search-user" placeholder="Search User...">
+                <button id="export-data-btn">Export Data</button>
             </header>
             <div id="admin-map"></div>
             <div id="admin-panel">
                 <div id="user-list-container">
                     <h2>Connected Users</h2>
                     <ul id="user-list"></ul>
+                </div>
+                <div id="user-details-container">
+                    <h2>User Details</h2>
+                    <div id="user-details"></div>
                 </div>
                 <div id="notifications-container">
                     <h2>Notifications</h2>
@@ -39,8 +45,8 @@
             </div>
         </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet-src.min.js" integrity="sha512-3/WyQrhTdqSVmSifQS62akgtNBhZha2lS44TnoN9Jk3J01FvsKK4suVmz6t5FtccGb5iJw58GoFhBjPE5EPc8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet-src.min.js"></script>
+        <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
         <script src="/js/admin.js"></script>
     <% } %>
 </body>

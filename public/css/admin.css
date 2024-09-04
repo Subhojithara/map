@@ -139,3 +139,78 @@ header h1 {
     background-color: #f0f0f0;
     border-radius: 5px;
 }
+
+
+#admin-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+#admin-map {
+    flex: 1;
+}
+
+#admin-panel {
+    display: flex;
+    height: 40%;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+#user-list-container,
+#user-details-container,
+#notifications-container {
+    flex: 1;
+    margin: 5px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+#notifications-container {
+    flex: 1.5;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
